@@ -1,0 +1,11 @@
+{application, httpc_bench, [
+  {description, "Erlang HTTP client benchmarks"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications, [
+    kernel,
+    stdlib
+  ]},
+  {mod, []},
+  {env, []}
+]}.
