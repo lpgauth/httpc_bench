@@ -13,6 +13,7 @@
 start() ->
     case get(?MODULE) of
         undefined ->
+            io:format("Server started...~n", []),
             {ok, LSocket} = listen(),
             put(?MODULE, LSocket),
             spawn(fun () -> accept(LSocket) end),
