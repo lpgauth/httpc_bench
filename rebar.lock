@@ -1,7 +1,7 @@
 {"1.1.0",
 [{<<"buoy">>,
   {git,"https://github.com/lpgauth/buoy.git",
-       {ref,"593eb3e1970b02814d35cfe2ed6a8145bf6d7922"}},
+       {ref,"0b84091516148a051cd36f9802cbe2c37e5a07c9"}},
   0},
  {<<"certifi">>,{pkg,<<"certifi">>,<<"0.7.0">>},1},
  {<<"cowlib">>,{pkg,<<"cowlib">>,<<"1.0.0">>},1},
