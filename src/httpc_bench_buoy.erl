@@ -23,7 +23,7 @@ start(PoolSize) ->
         {backlog_size, ?PIPELINING},
         {pool_size, PoolSize}
     ],
-    ok = buoy_pool:start(?HOSTNAME, ?PORT, Options).
+    ok = buoy_pool:start(?BUOY_URL, Options).
 
 stop() ->
-    ok = buoy_pool:stop(?HOSTNAME, ?PORT).
+    ok = buoy_pool:stop(?BUOY_URL).
