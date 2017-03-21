@@ -1,5 +1,9 @@
 {"1.1.0",
-[{<<"buoy">>,
+[{<<"bear">>,
+  {git,"https://github.com/boundary/bear.git",
+       {ref,"119234548783af19b8ec75c879c5062676b92571"}},
+  1},
+ {<<"buoy">>,
   {git,"https://github.com/lpgauth/buoy.git",
        {ref,"1d82ae368fb5c72b8c335cc27d13056b41142353"}},
   0},
@@ -47,7 +51,7 @@
  {<<"ssl_verify_fun">>,{pkg,<<"ssl_verify_fun">>,<<"1.1.1">>},1},
  {<<"timing">>,
   {git,"https://github.com/lpgauth/timing.git",
-       {ref,"f2c4753b6b694a9802501bbd0d1d49c4eb1d2ce7"}},
+       {ref,"7d8cf4ba38822ed763a21734a074947734c30a05"}},
   0}]}.
 [
 {pkg_hash,[
