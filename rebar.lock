@@ -51,7 +51,7 @@
  {<<"ssl_verify_fun">>,{pkg,<<"ssl_verify_fun">>,<<"1.1.1">>},1},
  {<<"timing">>,
   {git,"https://github.com/lpgauth/timing.git",
-       {ref,"7d8cf4ba38822ed763a21734a074947734c30a05"}},
+       {ref,"8a3c0320692fe48a266b29854e4e27b99f6a7a95"}},
   0}]}.
 [
 {pkg_hash,[
