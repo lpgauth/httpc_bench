@@ -15,7 +15,7 @@
     httpc_bench_ibrowse,
     httpc_bench_katipo
 ]).
--define(CONCURENCIES, [32, 64, 128, 512, 2048]).
+-define(CONCURENCIES, [32, 64, 128, 512, 2048, 4096]).
 -define(POOL_SIZES, [8, 16, 32, 64, 128, 256]).
 
 %% public
