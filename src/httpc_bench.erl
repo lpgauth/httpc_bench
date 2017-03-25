@@ -5,7 +5,7 @@
     run/0
 ]).
 
--define(N, 204800).
+-define(N, 2048000).
 
 -define(CLIENTS, [
     httpc_bench_buoy,
