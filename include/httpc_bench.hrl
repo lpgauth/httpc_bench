@@ -3,7 +3,7 @@
 -define(HOST, <<"127.0.0.1:8080">>).
 -define(HOSTNAME, <<"127.0.0.1">>).
 -define(PIPELINING, 1024).
--define(PATH, <<"/">>).
+-define(PATH, <<"/hello">>).
 -define(PORT, 8080).
 -define(TIMEOUT, 1000).
--define(URL, <<"http://127.0.0.1:8080/">>).
+-define(URL, <<"http://127.0.0.1:8080/hello">>).

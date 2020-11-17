@@ -8,12 +8,7 @@
 -define(N, 2048000).
 
 -define(CLIENTS, [
-    httpc_bench_buoy,
-    httpc_bench_dlhttpc,
-    httpc_bench_hackney,
-    httpc_bench_httpc,
-    httpc_bench_ibrowse,
-    httpc_bench_katipo
+    httpc_bench_buoy
 ]).
 -define(CONCURENCIES, [32, 64, 128, 512, 2048, 4096]).
 -define(POOL_SIZES, [8, 16, 32, 64, 128, 256]).
@@ -56,15 +51,11 @@ run_concurency(Client, PoolSize, [Concurency | T], N) ->
     {_Prefix, Client2} = lists:split(12, atom_to_list(Client)),
     Name = name(Client2, PoolSize, Concurency),
     Fun = fun() -> Client:get() end,
-    Results = timing_hdr:run(Fun, [
-        {name, Name},
-        {concurrency, Concurency},
-        {iterations, N},
-        {output, "output/" ++ atom_to_list(Name)}
-    ]),
-    Qps = lookup(success, Results) / (lookup(total_time, Results) / 1000000),
-    Errors = lookup(errors, Results) / lookup(iterations, Results) * 100,
-    io:format("~-8s ~7B ~11B ~11B ~8.1f~n",
-        [Client2, PoolSize, Concurency, trunc(Qps), Errors]),
+    Results = timing:function(Fun, N, Concurency),
+    io:format("~p~n", [Results]),
+    % Qps = lookup(success, Results) / (lookup(total_time, Results) / 1000000),
+    % Errors = lookup(errors, Results) / lookup(iterations, Results) * 100,
+    % io:format("~-8s ~7B ~11B ~11B ~8.1f~n",
+    %     [Client2, PoolSize, Concurency, trunc(Qps), Errors]),
     Client:stop(),
     run_concurency(Client, PoolSize, T, N).

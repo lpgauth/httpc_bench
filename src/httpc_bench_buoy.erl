@@ -10,7 +10,7 @@
 
 %% public
 get() ->
-    case buoy:get(?BUOY_URL, [], ?TIMEOUT) of
+    case buoy:get(?BUOY_URL, #{timeout => ?TIMEOUT}) of
         {ok, _} ->
             ok;
         {error, Reason} ->
